@@ -1,0 +1,35 @@
+# TYPO3 LDAP Schema
+# 
+# 1.0 - 2016 Andreas Beutel <Andreas.Beutel@mehrwert.de>
+#
+# 1.3.6.1.4.1 - IANA-assigned company OIDs, used for private MIBs and such things
+# see https://de.wikipedia.org/wiki/Object_Identifier
+#
+# @todo 99999 is used as Placeholder here
+#
+
+# attributeTypes
+
+attributetype ( 1.3.6.1.4.1.99999.2.1.1
+    NAME 'typo3Test'
+    DESC 'Test'
+    EQUALITY caseIgnoreMatch
+    SUBSTR caseIgnoreSubstringsMatch
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+attributetype ( 1.3.6.1.4.1.99999.2.1.2
+    NAME 'typo3slack'
+    DESC 'SLACK Username'
+    EQUALITY caseIgnoreMatch
+    SUBSTR caseIgnoreSubstringsMatch
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+
+# ObjectClasses
+
+objectClass ( 1.3.6.1.4.1.99999.2.2.1
+    NAME 'typo3Person'
+    DESC 'TYPO3 person object'
+    SUP top AUXILIARY 
+    MUST uid 
+    MAY ( typo3slack ) )
+
