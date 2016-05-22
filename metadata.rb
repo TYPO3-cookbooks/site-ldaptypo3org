@@ -10,5 +10,5 @@ depends 't3-base'
 
 depends 'ssl_certificates'
 
-depends 'openldap'
+depends 'openldap', '= 2.2.0'
 
