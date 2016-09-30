@@ -4,7 +4,7 @@ maintainer_email 'you@example.com'
 license 'all_rights'
 description 'Installs/Configures site-ldaptypo3org'
 long_description 'Installs/Configures site-ldaptypo3org'
-version '0.1.2'
+version '0.1.3'
 
 depends 't3-base'
 
