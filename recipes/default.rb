@@ -17,3 +17,4 @@ include_recipe "openldap::master"
 
 # take the config template from this cookbook
 resources("template[#{node['openldap']['dir']}/slapd.conf]").cookbook cookbook_name
+resources(template: '/etc/default/slapd').cookbook cookbook_name
